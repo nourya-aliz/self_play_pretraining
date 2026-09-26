@@ -1,0 +1,31 @@
+
+\begin{table}[t]
+\centering
+\small
+\setlength{\tabcolsep}{4.5pt}
+\begin{tabular}{lccccccc}
+\toprule
+ & \multicolumn{7}{c}{ablation} \\
+\cmidrule(lr){2-8}
+dataset & None & uniform & signed & shuffle & last\_step$^{\,b}$ & loss\_delta$^{\,a,b}$ & negate \\
+\midrule
+text (dclm)                 & 5.34 & 7.75 & \textbf{5.06} & 5.96 & 6.39 & 7.40 & 10.62 \\
+Metamath                    & \textbf{3.38} & 7.39 & 3.47 & 4.39 & 4.34 & 6.46 & 10.52 \\
+C source                    & 4.16 & 7.92 & \textbf{4.10} & 4.79 & 4.95 & 6.37 & 10.60 \\
+DNA (8-symbol)              & \textbf{2.29} & 3.02 & 2.45 & 2.50 & 3.22 & 3.57 & 8.37 \\
+arithmetic                  & \textbf{0.22} & 7.94 & 0.51 & 0.73 & 1.26 & 1.92 & 10.64 \\
+audio 8-bit PCM             & \textbf{2.27} & 3.93 & 2.45 & 2.91 & 3.39 & 3.67 & 7.67 \\
+audio 16-bit PCM            & \textbf{5.02} & 6.08 & 5.24 & 5.79 & 5.97 & 6.32 & 9.02 \\
+melody (Mutopia)            & \textbf{2.20} & 7.09 & 2.21 & 3.26 & 3.35 & 4.14 & 11.00 \\
+CIFAR-10 (planar)           & \textbf{5.96} & 7.83 & 6.14 & 7.14 & 7.22 & 7.59 & 10.59 \\
+random bytes         & \textbf{8.02} & \textbf{8.02} & 8.05 & \textbf{8.02} & 8.29 & 8.61 & 10.57 \\
+\bottomrule
+\end{tabular}
+\vspace{2em}
+\caption{
+\textbf{Reward ablations of the self-play generator} at the 1M parameter model. Each entry shows the validation loss in bits per byte of the 4-seed ensemble on 256 held-out sequences per dataset, scored from the final-round checkpoints. Every ablation changes exactly one property of the canonical reward $r_i = {|\langle P\odot\nabla L(y_i;\theta_{\text{now}}),\, \theta_{\text{past}}-\theta_{\text{now}}\rangle|}$ with $\theta_{\text{past}}=\theta_{\lfloor e/2\rfloor}$ (\emph{None}). \emph{Signed} drops the absolute value, \emph{shuffle} permutes the rewards across the program pool, \emph{last\_step} uses the one-step window $\theta_{\text{past}}=\theta_{e-1}$, \emph{loss\_delta} uses the realized progress $L_i(\theta_{\text{pre}})-L_i(\theta_{\text{post}})$, \emph{negate} flips the reward's sign, and \emph{uniform} removes the generator entirely (i.i.d.\ uniform programs). On the majority of datasets, the canonical reward is best, or nearly best, and it often has lower variance as well. \\
+$^{a}$ One loss\_delta seed stopped at round 2587 and is excluded; its ensemble is over 3 seeds. \\
+$^{b}$ last\_step and loss\_delta are bimodal across seeds (e.g.\ dclm single-seed 6.4 / 6.5 vs 10.6 / 11.1 for last\_step; 7.0 vs 9.8 / 12.3 for loss\_delta); their ensembles average over the diverged seeds.
+}
+\label{tab:reward_ablations}
+\end{table}

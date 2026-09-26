@@ -1,0 +1,47 @@
+{
+  "criterion": "Largest relative loss reduction versus the better baseline at one common compute budget; empirical Pareto frontiers, no extrapolation.",
+  "common_compute_budget": 3.75825207656448e+17,
+  "ranking": [
+    {
+      "corpus": "audio_8bit",
+      "dataset": "LibriSpeech PCM8",
+      "loss_bits_per_byte": {
+        "selfplay": 2.1884548664093018,
+        "uniform": 3.6110844214757285,
+        "pcfg": 5.188574433326721
+      },
+      "relative_loss_reduction": 0.3939618654733765
+    },
+    {
+      "corpus": "speech_commands_pcm8",
+      "dataset": "Speech Commands 16 kHz",
+      "loss_bits_per_byte": {
+        "selfplay": 1.975823712348938,
+        "uniform": 3.3881165981292725,
+        "pcfg": 2.481156826019287
+      },
+      "relative_loss_reduction": 0.20366834871985673
+    },
+    {
+      "corpus": "speech_commands_pcm8_8khz",
+      "dataset": "Speech Commands 8 kHz",
+      "loss_bits_per_byte": {
+        "selfplay": 2.123573732376099,
+        "uniform": 3.230597893397013,
+        "pcfg": 2.5879929065704346
+      },
+      "relative_loss_reduction": 0.17945148652272636
+    },
+    {
+      "corpus": "audio_16bit",
+      "dataset": "LibriSpeech PCM16",
+      "loss_bits_per_byte": {
+        "selfplay": 4.97266960144043,
+        "uniform": 6.013607501983643,
+        "pcfg": 7.425819993019104
+      },
+      "relative_loss_reduction": 0.17309708027999005
+    }
+  ],
+  "selected_corpus": "audio_8bit"
+}

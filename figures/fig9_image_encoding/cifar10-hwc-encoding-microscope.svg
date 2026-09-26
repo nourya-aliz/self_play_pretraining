@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="7.2in" height="2.35in" viewBox="0 0 720 235" role="img" aria-labelledby="title desc">
+  <title id="title">Schematic 32 by 32 RGB image as a row-major HWC byte record</title>
+  <desc id="desc">A schematic pixel-art image, left-to-right row guides, illustrative first and last RGB byte triplets, and a bracket marking the 3072-byte image record.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.4" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#777e86"/>
+    </marker>
+    <symbol id="airplane" viewBox="0 0 12 12">
+      <rect width="12" height="12" fill="#9fc5cf"/>
+      <rect x="0" y="8" width="12" height="4" fill="#4f7f96"/>
+      <rect x="0" y="8" width="12" height="1" fill="#6e9eaa"/>
+      <rect x="1" y="1" width="3" height="1" fill="#e5ece8"/>
+      <rect x="2" y="2" width="4" height="1" fill="#e5ece8"/>
+      <rect x="8" y="2" width="2" height="1" fill="#d8e5e5"/>
+      <rect x="2" y="5" width="8" height="2" fill="#253e4b"/>
+      <rect x="3" y="4" width="5" height="1" fill="#355565"/>
+      <rect x="4" y="3" width="2" height="2" fill="#d19a56"/>
+      <rect x="5" y="7" width="2" height="2" fill="#d19a56"/>
+      <rect x="9" y="4" width="1" height="1" fill="#253e4b"/>
+      <rect x="1" y="6" width="2" height="1" fill="#355565"/>
+    </symbol>
+  </defs>
+  <style>
+    .background { fill: #ffffff; }
+    .text { font-family: "DejaVu Sans", Arial, sans-serif; font-size: 14px; fill: #202124; }
+    .secondary { fill: #626971; }
+    .row-label { font-weight: 700; text-anchor: end; }
+    .annotation { font-size: 12px; fill: #626971; }
+    .row-line { stroke: #777e86; stroke-width: 1; fill: none; marker-end: url(#arrow); }
+    .guide { stroke: #aab0b8; stroke-width: 1; stroke-dasharray: 4 4; fill: none; }
+    .cell { stroke-width: 1.25; }
+    .red { fill: #f5dede; stroke: #bd5a5a; }
+    .green { fill: #dcece4; stroke: #4f8c6f; }
+    .blue { fill: #dce7f4; stroke: #4f75a7; }
+    .byte { font-weight: 700; text-anchor: middle; dominant-baseline: middle; }
+    .bracket { stroke: #777e86; stroke-width: 1; fill: none; }
+    .record-label { font-size: 12px; text-anchor: middle; fill: #4f565e; }
+  </style>
+
+  <rect class="background" x="0" y="0" width="720" height="235"/>
+
+  <g id="labels" class="text">
+    <text x="696" y="18" class="annotation" text-anchor="end">schematic 32 × 32 RGB · HWC order</text>
+    <text x="94" y="62" class="row-label secondary">image</text>
+    <text x="94" y="128" class="row-label secondary">bytes</text>
+    <text x="94" y="184" class="row-label secondary">record</text>
+  </g>
+
+  <g id="image" aria-label="Schematic 32 by 32 RGB thumbnail">
+    <use href="#airplane" x="105" y="26" width="68" height="68"/>
+    <rect x="105" y="26" width="68" height="68" fill="none" stroke="#777e86" stroke-width="1"/>
+  </g>
+
+  <g id="row-order" class="text" aria-label="Rows traversed from left to right">
+    <text x="188" y="39" class="annotation">row 0</text>
+    <path d="M232 35 H691" class="row-line"/>
+    <text x="188" y="59" class="annotation">row 1</text>
+    <path d="M232 55 H691" class="row-line"/>
+    <text x="210" y="72" class="annotation" text-anchor="middle">⋮</text>
+    <text x="188" y="89" class="annotation">row 31</text>
+    <path d="M232 85 H691" class="row-line"/>
+  </g>
+
+  <g id="byte-guides" aria-hidden="true">
+    <line x1="105" y1="96" x2="105" y2="104" class="guide"/>
+    <line x1="693" y1="96" x2="693" y2="104" class="guide"/>
+  </g>
+
+  <g id="byte-record" class="text" aria-label="Illustrative first and last RGB byte triplets">
+    <rect x="105" y="104" width="42" height="42" class="cell red"/>
+    <rect x="147" y="104" width="42" height="42" class="cell green"/>
+    <rect x="189" y="104" width="42" height="42" class="cell blue"/>
+    <line x1="231" y1="125" x2="567" y2="125" stroke="#aab0b8" stroke-width="1"/>
+    <circle cx="390" cy="125" r="2" fill="#777e86"/>
+    <circle cx="399" cy="125" r="2" fill="#777e86"/>
+    <circle cx="408" cy="125" r="2" fill="#777e86"/>
+    <rect x="567" y="104" width="42" height="42" class="cell red"/>
+    <rect x="609" y="104" width="42" height="42" class="cell green"/>
+    <rect x="651" y="104" width="42" height="42" class="cell blue"/>
+    <text x="126" y="125" class="byte">159</text>
+    <text x="168" y="125" class="byte">197</text>
+    <text x="210" y="125" class="byte">207</text>
+    <text x="588" y="125" class="byte">79</text>
+    <text x="630" y="125" class="byte">127</text>
+    <text x="672" y="125" class="byte">150</text>
+  </g>
+
+  <g id="record-length" class="text" aria-label="Full image record length">
+    <path d="M107 163 V170 H691 V163" class="bracket"/>
+    <text x="399" y="190" class="record-label">32 × 32 pixels × 3 channels × 1 byte = 3,072 bytes</text>
+  </g>
+
+  <g id="legend" class="text" aria-label="RGB byte legend">
+    <rect x="105" y="207" width="22" height="15" class="cell red"/>
+    <rect x="127" y="207" width="22" height="15" class="cell green"/>
+    <rect x="149" y="207" width="22" height="15" class="cell blue"/>
+    <text x="181" y="219" class="annotation">R, G, B are adjacent for each pixel</text>
+  </g>
+</svg>

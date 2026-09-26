@@ -1,0 +1,32 @@
+
+\begin{table}[ht]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lllcccc}
+\toprule
+\makecell{\textbf{Family}\\\textbf{(mod 256)}} &
+\textbf{Example program} & 
+\textbf{Its output} &
+\makecell{\textbf{Smallest}\\\textbf{size}} &
+\makecell{\textbf{Earliest}\\\textbf{round}} &
+\makecell{\textbf{Size at}\\\textbf{earliest round}} &
+\makecell{$\mathbb{E}[\text{first round}]$\\\textbf{(univ.\ prior)}} \\
+\midrule
+Arithmetic & \texttt{S+[.++]}            & $1,3,5,7,9,\ldots$   & 99k  & 0 & 6.2M & $\approx 105$ \\
+Fibonacci  & \texttt{S,[[.C>.C>]}        & $1,1,2,3,5,\ldots$   & 3.1M & 512 & 6.2M & $>53{,}000$ \\
+Geometric  & \texttt{S+[.L>]}            & $1,3,9,27,81,\ldots$ & 3.1M & 256 & 3.1M & $>53{,}000$ \\
+Quadratic  & \texttt{S,.[<C>{}>VX<RX++]}   & $9,25,59,111,\ldots$ & 3.1M & 512 & 6.2M & $>53{,}000$ \\
+Cubic      & \texttt{S+[[-.L>L>-]-]}     & $0,254,236,74,\ldots$ & 495k & 512 & 6.2M & $>53{,}000$ \\
+\bottomrule
+\end{tabular}
+\vspace{6pt}
+\caption{Program families with recognizable mathematical structure discovered by the generator during self-play.  
+\emph{Smallest size} reports the smallest model that generated at least a single member of the family during training. 
+\emph{Earliest round} and \emph{size at earliest round} report the earliest round such a member first appears during training, and the model size at which this first round occurs.
+Several of the discovered programs use the added primitives (\cref{apx:turing-machine}).
+These shorten the programs and so raise their probability under baseline uniform sampling too.
+The baseline draws from the same augmented alphabet and still finds none of these
+families, so the gap between the two columns is attributable to self-play. See \cref{apx:emergent-math-structure} for additional experimental details.}
+\label{tab: discovered-math-structure}
+\end{table}

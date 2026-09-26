@@ -1,0 +1,177 @@
+{
+ "model": "4-seed ensemble d512h8L8 r2816",
+ "trials": 128,
+ "rng_seed": 3,
+ "results": {
+  "index|m=4|k=2": {
+   "acc": 0.578125,
+   "p_correct": 0.309114009141922,
+   "pred_in_input": 0.9140625
+  },
+  "index|m=16|k=2": {
+   "acc": 0.6953125,
+   "p_correct": 0.47272682189941406,
+   "pred_in_input": 0.9375
+  },
+  "index|m=64|k=2": {
+   "acc": 0.8671875,
+   "p_correct": 0.602120041847229,
+   "pred_in_input": 0.96875
+  },
+  "index|m=256|k=2": {
+   "acc": 0.875,
+   "p_correct": 0.6538763046264648,
+   "pred_in_input": 0.96875
+  },
+  "index|m=4|k=4": {
+   "acc": 0.203125,
+   "p_correct": 0.0589725524187088,
+   "pred_in_input": 0.6171875
+  },
+  "index|m=16|k=4": {
+   "acc": 0.34375,
+   "p_correct": 0.1708199381828308,
+   "pred_in_input": 0.9609375
+  },
+  "index|m=64|k=4": {
+   "acc": 0.28125,
+   "p_correct": 0.17087417840957642,
+   "pred_in_input": 0.96875
+  },
+  "index|m=256|k=4": {
+   "acc": 0.3125,
+   "p_correct": 0.19169580936431885,
+   "pred_in_input": 0.953125
+  },
+  "index|m=4|k=8": {
+   "acc": 0.0,
+   "p_correct": 0.0037872681859880686,
+   "pred_in_input": 0.0078125
+  },
+  "index|m=16|k=8": {
+   "acc": 0.0,
+   "p_correct": 0.004975717514753342,
+   "pred_in_input": 0.0
+  },
+  "index|m=64|k=8": {
+   "acc": 0.015625,
+   "p_correct": 0.008672465570271015,
+   "pred_in_input": 0.0703125
+  },
+  "index|m=256|k=8": {
+   "acc": 0.0234375,
+   "p_correct": 0.014976851642131805,
+   "pred_in_input": 0.1875
+  },
+  "index|m=4|k=16": {
+   "acc": 0.0,
+   "p_correct": 0.00398768438026309,
+   "pred_in_input": 0.0859375
+  },
+  "index|m=16|k=16": {
+   "acc": 0.0,
+   "p_correct": 0.003985268995165825,
+   "pred_in_input": 0.03125
+  },
+  "index|m=64|k=16": {
+   "acc": 0.0,
+   "p_correct": 0.0034546656534075737,
+   "pred_in_input": 0.0
+  },
+  "shift|m=2|k=1": {
+   "acc": 0.0234375,
+   "p_correct": 0.009644477628171444,
+   "pred_in_input": 0.0078125
+  },
+  "shift|m=4|k=1": {
+   "acc": 0.171875,
+   "p_correct": 0.031222639605402946,
+   "pred_in_input": 0.03125
+  },
+  "shift|m=8|k=1": {
+   "acc": 0.3203125,
+   "p_correct": 0.0752454549074173,
+   "pred_in_input": 0.015625
+  },
+  "shift|m=16|k=1": {
+   "acc": 0.53125,
+   "p_correct": 0.19251495599746704,
+   "pred_in_input": 0.0
+  },
+  "shift|m=32|k=1": {
+   "acc": 0.75,
+   "p_correct": 0.32010695338249207,
+   "pred_in_input": 0.0
+  },
+  "shift|m=128|k=1": {
+   "acc": 0.9453125,
+   "p_correct": 0.6161439418792725,
+   "pred_in_input": 0.0
+  },
+  "shift|m=512|k=1": {
+   "acc": 0.9921875,
+   "p_correct": 0.7536333799362183,
+   "pred_in_input": 0.0
+  },
+  "sum|m=8|k=2": {
+   "acc": 0.03125,
+   "p_correct": 0.006711311638355255,
+   "pred_in_input": 0.03125
+  },
+  "sum|m=32|k=2": {
+   "acc": 0.28125,
+   "p_correct": 0.0428013876080513,
+   "pred_in_input": 0.015625
+  },
+  "sum|m=128|k=2": {
+   "acc": 0.671875,
+   "p_correct": 0.14478200674057007,
+   "pred_in_input": 0.0
+  },
+  "sum|m=512|k=2": {
+   "acc": 0.8671875,
+   "p_correct": 0.2427816092967987,
+   "pred_in_input": 0.0
+  },
+  "diff|m=8|k=2": {
+   "acc": 0.0078125,
+   "p_correct": 0.00464264303445816,
+   "pred_in_input": 0.0234375
+  },
+  "diff|m=32|k=2": {
+   "acc": 0.015625,
+   "p_correct": 0.007081016432493925,
+   "pred_in_input": 0.0
+  },
+  "diff|m=128|k=2": {
+   "acc": 0.0703125,
+   "p_correct": 0.02016664855182171,
+   "pred_in_input": 0.0078125
+  },
+  "diff|m=512|k=2": {
+   "acc": 0.078125,
+   "p_correct": 0.040658995509147644,
+   "pred_in_input": 0.0
+  },
+  "xor|m=8|k=2": {
+   "acc": 0.0078125,
+   "p_correct": 0.004481751471757889,
+   "pred_in_input": 0.0390625
+  },
+  "xor|m=32|k=2": {
+   "acc": 0.0,
+   "p_correct": 0.006598055362701416,
+   "pred_in_input": 0.0078125
+  },
+  "xor|m=128|k=2": {
+   "acc": 0.078125,
+   "p_correct": 0.02335866540670395,
+   "pred_in_input": 0.0078125
+  },
+  "xor|m=512|k=2": {
+   "acc": 0.1953125,
+   "p_correct": 0.04921017587184906,
+   "pred_in_input": 0.0
+  }
+ }
+}

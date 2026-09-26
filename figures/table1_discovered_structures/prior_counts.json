@@ -1,0 +1,12 @@
+{
+ "description": "Programs sampled i.i.d. uniformly over the instruction alphabet, executed, and passed through detect.py. Hit counts per family.",
+ "programs_per_round": 1024,
+ "samples": 164300000,
+ "hit_counts": {
+  "arithmetic": 1526,
+  "fibonacci": 0,
+  "geometric": 0,
+  "quadratic": 0,
+  "cubic": 0
+ }
+}

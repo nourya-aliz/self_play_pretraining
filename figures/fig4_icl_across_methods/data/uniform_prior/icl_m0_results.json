@@ -1,0 +1,29 @@
+{
+ "model": "4-seed ensemble d512h8L8 r2816",
+ "trials": 1024,
+ "rng_seed": 0,
+ "results": {
+  "palin|m=0|k=8": {
+   "acc_mean": 0.0001220703125,
+   "acc_by_position": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0009765625
+   ]
+  },
+  "stack|m=0|L=4": {
+   "acc": 0.0
+  },
+  "max|0|2": {
+   "acc": 0.0
+  },
+  "min|0|2": {
+   "acc": 0.0
+  }
+ }
+}

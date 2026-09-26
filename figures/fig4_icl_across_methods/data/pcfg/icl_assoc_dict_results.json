@@ -1,0 +1,25 @@
+{
+ "model": "4-seed ensemble d512h8L8 r2816",
+ "trials": 1024,
+ "rng_seed": 4,
+ "results": {
+  "assoc|extra=0|V=16": {
+   "acc": 0.5927734375
+  },
+  "assoc|extra=1|V=16": {
+   "acc": 0.6455078125
+  },
+  "assoc|extra=2|V=16": {
+   "acc": 0.66015625
+  },
+  "assoc|extra=4|V=16": {
+   "acc": 0.6904296875
+  },
+  "assoc|extra=8|V=16": {
+   "acc": 0.7294921875
+  },
+  "assoc|extra=16|V=16": {
+   "acc": 0.75
+  }
+ }
+}

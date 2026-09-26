@@ -1,0 +1,34 @@
+\begin{table}[t]
+  \centering
+  \small
+  \begin{tabular}{l r r l}
+  \toprule
+  Modality / dataset & Ours $b$ & Literature $b$ & Ref. \\
+  \midrule
+  \multicolumn{4}{l}{\emph{Text}} \\
+  text (dclm) & $0.123$ & $0.048$--$0.099^{\dagger}$ & \citet{henighan2020scaling,aghajanyan2023scaling} \\
+  \midrule
+  \multicolumn{4}{l}{\emph{Images}} \\
+  CIFAR-10 (HWC interl.) & $0.066$ &  &  \\
+  CIFAR-10 image bytes   & $0.145$ & $0.065^{\dagger}$--$0.10$ & \citet{aghajanyan2023scaling}; \citet{henighan2020scaling} \\
+  \midrule
+  \multicolumn{4}{l}{\emph{Audio / speech}} \\
+  audio 16-bit PCM               & $0.141$ &  &  \\
+  audio 8-bit PCM                & $0.260$ & $0.12^{\dagger}$--$0.14^{\dagger}$ & \citet{cuervo2024scaling,aghajanyan2023scaling} \\
+  MIDI (Mutopia, 16th note grid) & $0.249$ & -- &  \\
+  \midrule
+  \multicolumn{4}{l}{\emph{Math / formal}} \\
+  Metamath set.mm & $0.129$ & $0.17$ & \citet{henighan2020scaling} \\
+  \midrule
+  \multicolumn{4}{l}{\emph{Biological sequences}} \\
+  DNA (8-symbol) & $0.435$ & $0.01$--$0.06$ & \citet{shah2026dnahnet} \\
+  \midrule
+  \multicolumn{4}{l}{\emph{Code}} \\
+  AITDCC C source        & $0.116$ & $0.17^{\dagger}$ & \citet{aghajanyan2023scaling} \\
+  Python source (GitHub) & $0.113$ &  &  \\
+  \bottomrule
+  \end{tabular}
+  \caption{
+Per-modality compute exponents $b$ from fits $L(C)=A\,C^{-b}+E$. Values marked $^{\dagger}$ are derived from published Chinchilla-form fits via $b=\alpha\beta/(\alpha+\beta)$ under the compute-optimal allocation. Where a range is given, values correspond to the citations in order. Dashes indicate that the authors could not find a published exponent for that modality. Exponents from \method{} are broadly similar to exponents from pre-training on the literature, if a bit higher. A detailed description and an illustration of the datasets can be found in \cref{app:benchmarks}}
+  \label{tab:scaling_exponents}
+  \end{table}

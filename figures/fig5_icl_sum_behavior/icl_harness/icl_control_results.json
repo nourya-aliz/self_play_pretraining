@@ -1,0 +1,133 @@
+{
+ "model": "4-seed ensemble d512h8L8 r2816",
+ "trials": 256,
+ "rng_seed": 1,
+ "results": {
+  "max|32|2": {
+   "acc": 0.5703125,
+   "acc_decoupled": 0.0,
+   "pred_is_other_query_byte": 0.40234375,
+   "acc_within_4": 0.609375,
+   "mae": 32.28125
+  },
+  "max|128|2": {
+   "acc": 0.671875,
+   "acc_decoupled": 0.00390625,
+   "pred_is_other_query_byte": 0.2890625,
+   "acc_within_4": 0.71484375,
+   "mae": 23.01953125
+  },
+  "max|256|2": {
+   "acc": 0.71484375,
+   "acc_decoupled": 0.0,
+   "pred_is_other_query_byte": 0.23828125,
+   "acc_within_4": 0.765625,
+   "mae": 17.87109375
+  },
+  "max|512|2": {
+   "acc": 0.68359375,
+   "acc_decoupled": 0.00390625,
+   "pred_is_other_query_byte": 0.265625,
+   "acc_within_4": 0.73046875,
+   "mae": 19.86328125
+  },
+  "min|32|2": {
+   "acc": 0.5,
+   "acc_decoupled": 0.00390625,
+   "pred_is_other_query_byte": 0.48828125,
+   "acc_within_4": 0.515625,
+   "mae": 42.70703125
+  },
+  "min|128|2": {
+   "acc": 0.6171875,
+   "acc_decoupled": 0.0,
+   "pred_is_other_query_byte": 0.359375,
+   "acc_within_4": 0.64453125,
+   "mae": 33.5078125
+  },
+  "min|256|2": {
+   "acc": 0.63671875,
+   "acc_decoupled": 0.00390625,
+   "pred_is_other_query_byte": 0.31640625,
+   "acc_within_4": 0.68359375,
+   "mae": 29.40234375
+  },
+  "min|512|2": {
+   "acc": 0.62109375,
+   "acc_decoupled": 0.0,
+   "pred_is_other_query_byte": 0.32421875,
+   "acc_within_4": 0.671875,
+   "mae": 27.40234375
+  },
+  "mean|32|2": {
+   "acc": 0.01953125,
+   "acc_decoupled": 0.00390625,
+   "pred_is_other_query_byte": 0.01171875,
+   "acc_within_4": 0.16015625,
+   "mae": 39.83984375
+  },
+  "mean|128|2": {
+   "acc": 0.078125,
+   "acc_decoupled": 0.00390625,
+   "pred_is_other_query_byte": 0.015625,
+   "acc_within_4": 0.2578125,
+   "mae": 24.18359375
+  },
+  "mean|256|2": {
+   "acc": 0.1640625,
+   "acc_decoupled": 0.0078125,
+   "pred_is_other_query_byte": 0.015625,
+   "acc_within_4": 0.4140625,
+   "mae": 13.83984375
+  },
+  "mean|512|2": {
+   "acc": 0.1796875,
+   "acc_decoupled": 0.0,
+   "pred_is_other_query_byte": 0.01171875,
+   "acc_within_4": 0.43359375,
+   "mae": 19.30859375
+  },
+  "sum|32|2": {
+   "acc": 0.4296875,
+   "acc_decoupled": 0.0078125,
+   "pred_is_other_query_byte": 0.00390625,
+   "acc_within_4": 0.48828125,
+   "mae": 26.7109375
+  },
+  "sum|128|2": {
+   "acc": 0.75390625,
+   "acc_decoupled": 0.0078125,
+   "pred_is_other_query_byte": 0.00390625,
+   "acc_within_4": 0.75390625,
+   "mae": 7.44921875
+  },
+  "sum|256|2": {
+   "acc": 0.7578125,
+   "acc_decoupled": 0.01171875,
+   "pred_is_other_query_byte": 0.0,
+   "acc_within_4": 0.765625,
+   "mae": 10.44140625
+  },
+  "sum|512|2": {
+   "acc": 0.8515625,
+   "acc_decoupled": 0.01171875,
+   "pred_is_other_query_byte": 0.0,
+   "acc_within_4": 0.8515625,
+   "mae": 3.71875
+  },
+  "max|128|4": {
+   "acc": 0.28125,
+   "acc_decoupled": 0.01171875,
+   "pred_is_other_query_byte": 0.57421875,
+   "acc_within_4": 0.3515625,
+   "mae": 56.453125
+  },
+  "sum|128|4": {
+   "acc": 0.00390625,
+   "acc_decoupled": 0.00390625,
+   "pred_is_other_query_byte": 0.0078125,
+   "acc_within_4": 0.04296875,
+   "mae": 89.81640625
+  }
+ }
+}

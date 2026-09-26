@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="7.2in" height="2.35in" viewBox="0 0 720 235" role="img" aria-labelledby="title desc">
+  <title id="title">Beethoven Fifth encoding microscope</title>
+  <desc id="desc">An unmetered staff transcription of three G4 eighth notes and one E-flat 4 half note, aligned to fourteen byte cells containing pitch onsets and hold values.</desc>
+  <style>
+    /* Edit these class colors to restyle the complete figure. */
+    .background { fill: #ffffff; }
+    .text { font-family: "DejaVu Sans", Arial, sans-serif; font-size: 14px; fill: #202124; }
+    .secondary { fill: #626971; }
+    .row-label { font-weight: 700; text-anchor: end; }
+    .annotation { font-size: 12px; fill: #626971; }
+    .staff { stroke: #777e86; stroke-width: 1; }
+    .guide { stroke: #aab0b8; stroke-width: 1; stroke-dasharray: 4 4; }
+    .note { fill: #202124; stroke: #202124; stroke-width: 1.6; }
+    .note-open { fill: #ffffff; stroke: #202124; stroke-width: 1.8; }
+    .stem { stroke: #202124; stroke-width: 1.6; fill: none; }
+    .onset { fill: #dce8f6; stroke: #2e5f8a; stroke-width: 1.6; }
+    .hold { fill: #f2f3f5; stroke: #aab0b8; stroke-width: 1; }
+    .byte { font-weight: 700; text-anchor: middle; dominant-baseline: middle; }
+    .bracket { stroke: #777e86; stroke-width: 1; fill: none; }
+    .duration { font-size: 12px; text-anchor: middle; fill: #4f565e; }
+  </style>
+
+  <!-- Delete or hide this rectangle for a transparent background. -->
+  <rect class="background" x="0" y="0" width="720" height="235" />
+
+  <g id="labels" class="text">
+    <text x="696" y="18" class="annotation" text-anchor="end">1 cell = 1/16 note</text>
+    <text x="94" y="58" class="row-label secondary">notes</text>
+    <text x="94" y="128" class="row-label secondary">byte</text>
+    <text x="94" y="184" class="row-label secondary">duration</text>
+  </g>
+
+  <g id="staff" aria-label="Unmetered staff">
+    <line x1="105" y1="35" x2="693" y2="35" class="staff" />
+    <line x1="105" y1="43" x2="693" y2="43" class="staff" />
+    <line x1="105" y1="51" x2="693" y2="51" class="staff" />
+    <line x1="105" y1="59" x2="693" y2="59" class="staff" />
+    <line x1="105" y1="67" x2="693" y2="67" class="staff" />
+
+    <g id="note-g4-1">
+      <ellipse cx="126" cy="59" rx="6.4" ry="4.4" transform="rotate(-18 126 59)" class="note" />
+      <line x1="131" y1="59" x2="131" y2="34" class="stem" />
+      <path d="M131 34 C140 37, 141 43, 136 47" class="stem" />
+    </g>
+    <g id="note-g4-2">
+      <ellipse cx="210" cy="59" rx="6.4" ry="4.4" transform="rotate(-18 210 59)" class="note" />
+      <line x1="215" y1="59" x2="215" y2="34" class="stem" />
+      <path d="M215 34 C224 37, 225 43, 220 47" class="stem" />
+    </g>
+    <g id="note-g4-3">
+      <ellipse cx="294" cy="59" rx="6.4" ry="4.4" transform="rotate(-18 294 59)" class="note" />
+      <line x1="299" y1="59" x2="299" y2="34" class="stem" />
+      <path d="M299 34 C308 37, 309 43, 304 47" class="stem" />
+    </g>
+    <g id="note-eb4">
+      <text x="359" y="72" class="text" font-size="18" font-weight="700">♭</text>
+      <ellipse cx="378" cy="67" rx="6.8" ry="4.6" transform="rotate(-18 378 67)" class="note-open" />
+      <line x1="383" y1="67" x2="383" y2="39" class="stem" />
+    </g>
+  </g>
+
+  <g id="onset-guides" aria-hidden="true">
+    <line x1="126" y1="76" x2="126" y2="104" class="guide" />
+    <line x1="210" y1="76" x2="210" y2="104" class="guide" />
+    <line x1="294" y1="76" x2="294" y2="104" class="guide" />
+    <line x1="378" y1="76" x2="378" y2="104" class="guide" />
+  </g>
+
+  <g id="byte-cells" class="text" aria-label="Fourteen byte cells">
+    <rect x="105" y="104" width="42" height="42" class="onset" />
+    <rect x="147" y="104" width="42" height="42" class="hold" />
+    <rect x="189" y="104" width="42" height="42" class="onset" />
+    <rect x="231" y="104" width="42" height="42" class="hold" />
+    <rect x="273" y="104" width="42" height="42" class="onset" />
+    <rect x="315" y="104" width="42" height="42" class="hold" />
+    <rect x="357" y="104" width="42" height="42" class="onset" />
+    <rect x="399" y="104" width="42" height="42" class="hold" />
+    <rect x="441" y="104" width="42" height="42" class="hold" />
+    <rect x="483" y="104" width="42" height="42" class="hold" />
+    <rect x="525" y="104" width="42" height="42" class="hold" />
+    <rect x="567" y="104" width="42" height="42" class="hold" />
+    <rect x="609" y="104" width="42" height="42" class="hold" />
+    <rect x="651" y="104" width="42" height="42" class="hold" />
+
+    <text x="126" y="125" class="byte">67</text>
+    <text x="168" y="125" class="byte">128</text>
+    <text x="210" y="125" class="byte">67</text>
+    <text x="252" y="125" class="byte">128</text>
+    <text x="294" y="125" class="byte">67</text>
+    <text x="336" y="125" class="byte">128</text>
+    <text x="378" y="125" class="byte">63</text>
+    <text x="420" y="125" class="byte">128</text>
+    <text x="462" y="125" class="byte">128</text>
+    <text x="504" y="125" class="byte">128</text>
+    <text x="546" y="125" class="byte">128</text>
+    <text x="588" y="125" class="byte">128</text>
+    <text x="630" y="125" class="byte">128</text>
+    <text x="672" y="125" class="byte">128</text>
+  </g>
+
+  <g id="durations" class="text" aria-label="Event durations">
+    <path d="M107 163 V170 H187 V163" class="bracket" />
+    <path d="M191 163 V170 H271 V163" class="bracket" />
+    <path d="M275 163 V170 H355 V163" class="bracket" />
+    <path d="M359 163 V170 H691 V163" class="bracket" />
+    <text x="147" y="190" class="duration">G4 · 2 cells</text>
+    <text x="231" y="190" class="duration">G4 · 2 cells</text>
+    <text x="315" y="190" class="duration">G4 · 2 cells</text>
+    <text x="525" y="190" class="duration">E♭4 · 8 cells</text>
+  </g>
+
+  <g id="legend" class="text" aria-label="Encoding legend">
+    <rect x="105" y="207" width="22" height="15" class="onset" />
+    <text x="136" y="219" class="annotation">pitch onset (0–127)</text>
+    <rect x="287" y="207" width="22" height="15" class="hold" />
+    <text x="318" y="219" class="annotation">hold previous note (128)</text>
+  </g>
+</svg>
