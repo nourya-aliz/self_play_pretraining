@@ -165,11 +165,17 @@ class _Block(nn.Module):
 class ProgramLanguageModel(nn.Module):
     """Byte-level Llama-style transformer over programs and their outputs.
 
-    Construct with the values in a checkpoint's ``config.json`` and load its
-    ``learner_state_dict``:
+    Learners and generators share this class. Construct each from its entry in
+    the seed's ``config.json`` and load the matching checkpoint:
 
-        model = ProgramLanguageModel(**config)
-        model.load_state_dict(blob["learner_state_dict"], strict=False)
+        config = json.load(open("config.json"))
+        learner = ProgramLanguageModel(**config["learner"])
+        learner.load_state_dict(blob["learner_state_dict"], strict=False)
+
+        generator = ProgramLanguageModel(**config["generator"])
+        generator.load_state_dict(gen_blob["generator_state_dict"])
+        programs = generator.generate(program_prefix_ids(n, device),
+                                      max_new_tokens=255)
     """
 
     def __init__(self, d_model: int = 64, n_heads: int = 4, n_layers: int = 4,

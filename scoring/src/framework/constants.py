@@ -2,7 +2,8 @@ import numpy as np
 import torch
 import torch.nn.functional as F
 
-BF_CHARS = b'<>+-[].,F'
+# 8 Brainfuck instructions, the 10 macro instructions (Appendix E), then the 'F' terminator
+BF_CHARS = b'<>+-[].,' + b'ZRLNCGHWVX' + b'F'
 EDIT_CHARS = np.frombuffer(BF_CHARS[:-1], dtype=np.uint8)   # BF alphabet minus 'F'
 
 # Prefix conventions: every sequence starts with a single tag byte that marks
