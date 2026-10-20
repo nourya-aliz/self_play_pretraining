@@ -8,6 +8,7 @@ table, and the curriculum validation scores.
 
 `torch`, `numpy`, `huggingface_hub`, `jvp_flash_attention` (CUDA sm_75 or
 newer), plus `requests`, `zstandard`, and `mido` for the corpus bake scripts.
+`Cython` is optional and speeds up program execution.
 
 ## Pipeline
 
@@ -52,6 +53,20 @@ newer), plus `requests`, `zstandard`, and `mido` for the corpus bake scripts.
    python fetch_ensemble.py --out ../figures/fig5_icl_sum_behavior/ensemble
    ```
 
+5. To sample programs from the generators and run them:
+
+   ```bash
+   python sample_programs.py --size 1M --seed 40354564 \
+       --rounds 256:4096:256 --n 65536 --out programs.npz
+   ```
+
+   Programs are sampled as in training and run on the machine described in
+   Appendix E (`src/framework/machine.py`), with each model size's training
+   limits. The output holds the programs and the learner's training rows.
+   Execution uses a compiled kernel when Cython and a C compiler are
+   available and a slower pure-Python path otherwise; both give identical
+   results.
+
 ## Conventions
 
 Input is the byte `O` prefix followed by 4095 corpus bytes. The score is the
@@ -60,5 +75,5 @@ before taking the negative log (base 2). Per-K seed subsets are enumerated
 exactly when C(S, K) <= 32 and otherwise use 32 bootstrap draws from an RNG
 seeded by sha256 of `target:round:0`.
 
-`src/` holds the model definition, the evaluation code, and the benchmark
-bake scripts. Training code is not part of this release.
+`src/` holds the model definition, the program machine, the evaluation code,
+and the benchmark bake scripts. Training code is not part of this release.
